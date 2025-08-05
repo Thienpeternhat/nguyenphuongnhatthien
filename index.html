@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gán nhãn sản phẩm</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Gán nhãn sản phẩm</h1>
+
+    <img src="{{ url_for('static', filename='images/' + image_file) }}" alt="Sản phẩm" width="300px"><br><br>
+
+    <form method="POST">
+        <label>Tên sản phẩm:</label><br>
+        <input type="text" name="ten_san_pham" required><br>
+
+        <label>Công ty sản xuất:</label><br>
+        <input type="text" name="cty_sx" required><br>
+
+        <label>Công ty nhập khẩu:</label><br>
+        <input type="text" name="cty_nk" required><br>
+
+        <label>Ngày sản xuất:</label><br>
+        <input type="date" name="nsx" required><br>
+
+        <label>Ngày hết hạn:</label><br>
+        <input type="date" name="hsd" required><br>
+
+        <label>Loại sản phẩm:</label><br>
+        <input type="text" name="loai" required><br><br>
+
+        <button type="submit">Next</button>
+    </form>
+</body>
+</html>
